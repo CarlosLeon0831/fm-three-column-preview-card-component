@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 html,
 body {
@@ -17,6 +17,29 @@ body {
   background: var(--very-light-gray);
 }
 
+h1 {
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+}
+
+p {
+  color: var(--trans-white);
+  line-height: 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+button {
+    padding: 15px 35px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--very-light-gray);
+    margin-top: 80px;
+    font-family: "Lexend Deca", sans-serif;
+    letter-spacing: 0.5px;
+}
+
 footer {
   position: absolute;
   display: flex;
@@ -26,28 +49,59 @@ footer {
 
 .card__container {
   display: flex;
-  width: 700px;
-  height: 400px;
+  width: 900px;
+  height: 500px;
 }
 
+/* Individual columns */
+.sedans__container {
+  background: var(--bright-orange);
+  padding: 45px;
+  border-radius: 10px 0 0 10px;
+}
+
+.suvs__container {
+  background: var(--dark-cyan);
+  padding: 45px;
+}
+
+.luxury__container {
+  background: var(--very-dark-cyan);
+  padding: 45px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-cyan);
 }
 
-@media screen and(max-width:375px){
-    
+/* Buttons */
+#sedansBtn {
+    color: var(--bright-orange);
+}
+
+#suvsBtn {
+    color: var(--dark-cyan);
+}
+
+#luxuryBtn {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and(max-width:375px) {
 }
 
 :root {
-    /* Primary */
-    --bright-orange: hsl(31, 77%, 52%);
-    --dark-cyan: hsl(184, 100%, 22%);
-    --very-dark-cyan: hsl(179, 100%, 13%);
-    /* Neutral */
-    --trans-white: hsla(0, 0%, 100%, 0.75);
-    --very-light-gray: hsl(0, 0%, 95%);
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
 }
