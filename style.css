@@ -31,13 +31,20 @@ p {
 }
 
 button {
-    padding: 15px 35px;
-    border-radius: 25px;
-    border: none;
-    background-color: var(--very-light-gray);
-    margin-top: 80px;
-    font-family: "Lexend Deca", sans-serif;
-    letter-spacing: 0.5px;
+  padding: 12px 35px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--very-light-gray);
+  margin-top: 80px;
+  font-family: "Lexend Deca", sans-serif;
+  border: 2px solid var(--very-light-gray);
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid var(--very-light-gray);
+  cursor: pointer;
 }
 
 footer {
@@ -49,7 +56,7 @@ footer {
 
 .card__container {
   display: flex;
-  width: 900px;
+  width: 890px;
   height: 500px;
 }
 
@@ -75,6 +82,8 @@ footer {
 .attribution {
   font-size: 11px;
   text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(0, 0, 0, 0.541);
 }
 .attribution a {
   color: var(--dark-cyan);
@@ -82,18 +91,51 @@ footer {
 
 /* Buttons */
 #sedansBtn {
-    color: var(--bright-orange);
+  color: var(--bright-orange);
 }
 
 #suvsBtn {
-    color: var(--dark-cyan);
+  color: var(--dark-cyan);
 }
 
 #luxuryBtn {
-    color: var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
 }
 
-@media screen and(max-width:375px) {
+#sedansBtn:hover,
+#suvsBtn:hover,
+#luxuryBtn:hover {
+  color: var(--very-light-gray);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: 120%;
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    padding-top: 50px;
+  }
+
+  .card__container {
+    flex-direction: column;
+    width: 330px;
+  }
+
+  .sedans__container {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury__container {
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 :root {
